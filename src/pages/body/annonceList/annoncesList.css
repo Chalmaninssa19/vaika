@@ -1,0 +1,93 @@
+.list-annonces {
+    padding-top: 2%;
+}
+
+/*Filtre avancee*/
+.filter-row {
+    padding-top: 5%;
+}
+
+.filter {
+    margin: auto;
+    border : 1px solid #dadfe9;
+} 
+
+.filter-box {
+    padding-left: 5%;
+}
+
+.list-annonces-box {
+    background: rgb(238, 236, 236);
+}
+
+.validate-button {
+    padding-top: 10%;
+    margin-bottom: 10%;
+}
+
+.filter-title {
+    background-color: #198754;
+    color: white;
+    height: 70px;
+    padding-top: 6%;
+    text-align: center;
+}
+
+/*Les annonces*/
+
+.single-annonce-box {
+    border: 2px solid #d3d4d6;
+    margin-top: 10%;
+    background: white;
+}
+.img-annonce {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px;
+    height: 220px;
+    border-bottom: 1px solid #dadfe9;
+}
+.annonce-info{
+    padding:0px 7px;
+}
+.annonce-info p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0f0f0f;
+    text-transform: capitalize;
+}
+
+.annonce-carac {
+    padding:12px 7px;
+}
+
+.annonce-carac p {
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.annonce-prix {
+    text-align: center;
+    color: white;
+    width: 50%;
+    margin-left: 25%;
+    background-color: #0d6efd;
+    border: 1px solid rgb(236, 231, 231);
+    border-radius: 30px 30px 30px 30px;
+}
+
+.header-annonce {
+    text-align: center;
+    padding-top: 2%;
+}
+.featured-mi-span{display: inline-block;margin:0 10px;}
+.featured-hp-span{display: inline-block;margin-right: 10px;}
+.featured-cars-txt{margin:21px 0 47px;}
+.featured-cars-txt h2 a{font-size: 16px;margin-bottom: 15px;}
+.featured-cars-txt h2 a span{text-transform: uppercase;}
+.featured-cars-txt h3{margin-bottom: 10px;}
+.featured-cars-txt h3,.featured-cars-txt p{font-size: 13px;}
+
+.featured-img-box:hover{box-shadow: 0 12px 30px 0px #4df5a7;background: #68c59a;border: 1px solid #198754}

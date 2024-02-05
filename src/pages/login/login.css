@@ -1,0 +1,34 @@
+.login {
+    border: 1px solid #d3d5da;
+    width: 40%;
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+.champ-login {
+    padding-top: 5%;
+}
+
+.button-login {
+    padding-top: 5%;
+    padding-left: 15%;
+    margin: auto;
+    width: 70%;
+}
+
+.button-login button {
+    height: 60px;
+    width: 100%;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.login-input {
+    margin: auto;
+    width: 70%;
+    height: 60px;
+}
+
+.title-login {
+    padding-top: 10%;
+}

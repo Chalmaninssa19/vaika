@@ -1,0 +1,42 @@
+.image-item {
+    width: 20%;
+    margin-top: 3%;
+}
+
+.tab-prix {
+    padding-top: 5%;
+    margin: auto;
+    text-align: center;
+    border: 2px solid #d3d5da;
+}
+.tab-carac {
+    text-align: center;
+    border: 2px solid #d3d5da;
+    padding-top: 5%;
+}
+
+.carac-item {
+    font-size: large;
+}
+.button-prix {
+    width: 90%;
+    height: 80px;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.description-item .value {
+    font-weight: 700;
+}
+
+.description-item span {
+    display: inline-block;
+    width: 50%;
+    font-size: x-large;
+}
+  
+.value {
+    color: #000;
+}
