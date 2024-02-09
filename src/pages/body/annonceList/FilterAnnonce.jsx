@@ -8,7 +8,7 @@ function FilterAnnonce({data}) {
         <div class="col-md-2 col-sm-6 filter">
             <div class="row filter-title">
                 <div class="col-sm-6 col-md-12">
-                    <h2 class="fw-bolder fs-3">Filtres avancees</h2>
+                    <h2 class="fw-bolder fs-1">Filtres avancees</h2>
                 </div>
             </div>
             <div class="row filter-box">

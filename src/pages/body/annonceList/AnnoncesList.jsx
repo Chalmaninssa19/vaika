@@ -46,7 +46,7 @@ function AnnoncesList() {
                     console.error('Error fetching data: ', error);
                 });
         } else {
-            axios.get('http://localhost:1970/api/voiture/annonces')
+            axios.get('voiture-production-524c.up.railway.app/api/voiture/annonces')
                 .then(response => {
                     setData(response.data.data);
                 })
@@ -65,7 +65,7 @@ function AnnoncesList() {
 
         try {
             setLoading(true);
-            const response = await axios.post('http://localhost:1970/api/voiture/annonces/filter/multiCritere', formData);
+            const response = await axios.post('voiture-production-524c.up.railway.app/api/voiture/annonces/filter/multiCritere', formData);
             console.log(response.data);
             setData(response.data.data);
             setError(null);

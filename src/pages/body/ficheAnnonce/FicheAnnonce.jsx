@@ -18,7 +18,7 @@ function FicheAnnonce() {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:1970/api/voiture/annonce/'+id)
+        axios.get('voiture-production-524c.up.railway.app/api/voiture/annonce/'+id)
             .then(response => {
                 setData(response.data.data.annonce);
                 console.log(response.data.data.annonce);
