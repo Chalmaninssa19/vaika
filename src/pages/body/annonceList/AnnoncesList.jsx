@@ -38,7 +38,7 @@ function AnnoncesList() {
 
     useEffect(() => {
         if (param && param.trim() !== '') {
-            axios.get(`http://localhost:1970/api/voiture/annonces/filter?param=${param}&value=${value}`)
+            axios.get(`voiture-production-524c.up.railway.app/api/voiture/annonces/filter?param=${param}&value=${value}`)
                 .then(response => {
                     setData(response.data.data);
                 })
