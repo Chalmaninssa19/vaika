@@ -5,6 +5,7 @@ import FicheAnnonce from "./pages/body/ficheAnnonce/FicheAnnonce"
 import { Routes, Route, BrowserRouter as Router } from 'react-router-dom'
 import Login from "./pages/login/Login"
 import MessagerieInterne from "./pages/body/messagerieInterne/MessagerieInterne"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return <>
