@@ -1,42 +1,53 @@
-import './login.css'
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Importer useNavigate depuis react-router-dom
 import { MdWarning } from 'react-icons/md';
-
+import './login.css';
 
 function Login() {
-    return <>
-        <div class="container login">
-          <div class="error-login">
-            <p class="text-danger">
-              <MdWarning /> Erreur d'authentification : Verifier votre mot de passe
-            </p>
-          </div>
-          <div class="title-login">
-            <h2 class="fw-bold">Bienvenue dans notre systeme de messagerie interne, 
-            Veuillez vous connecter</h2>
-          </div>
-          <div class="champ-login">
-            <form action="/discussions" method="POST">
-              <div class="row mb-3">
-                <label for="inputEmail3" class="col-sm-2 col-form-label">Email or username</label>
-                <div class="col-sm-10">
-                  <input type="email" class="form-control login-input" id="inputEmail3"/>
-                </div>
-              </div>
-              <div class="row mb-3">
-                <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-                <div class="col-sm-10">
-                  <input type="password" class="form-control login-input" id="inputPassword3"/>
-                </div>
-              </div>
-              <div class="row button-login">
-                  <button type="submit" class="btn-success">Se connecter</button>
-              </div> 
-            </form>
-          </div>
-        </div>
-    </>
+  const navigate = useNavigate(); // Utiliser useNavigate pour la redirection
+  const [redirectToDiscussion, setRedirectToDiscussion] = useState(false); // Ajouter un état pour gérer la redirection
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Ici, vous pouvez ajouter la logique de vérification d'authentification, puis :
+    setRedirectToDiscussion(true); // Définir redirectToDiscussion à true pour déclencher la redirection
+  };
+
+  if (redirectToDiscussion) {
+    navigate('/discussions'); // Rediriger vers la page de discussion en utilisant navigate
   }
-  
-  
-  export default Login
-  
+
+  return (
+    <div className="login">
+      <div className="error-login">
+        <p className="text-danger">
+          <MdWarning /> Erreur d'authentification : Veuillez vérifier votre mot de passe
+        </p>
+      </div>
+      <div className="title-login">
+        <h2 className="fw-bold">Bienvenue dans notre système de messagerie interne, Veuillez vous connecter</h2>
+      </div>
+      <div className="champ-login">
+        <form onSubmit={handleSubmit}> {/* Utiliser onSubmit pour gérer la soumission du formulaire */}
+          <div className="row mb-3">
+            <label htmlFor="inputEmail3" className="col-md-2 col-form-label">Email or username</label>
+            <div className="col-md-8">
+              <input type="email" className="form-control login-input" id="inputEmail3" />
+            </div>
+          </div>
+          <div className="row mb-3">
+            <label htmlFor="inputPassword3" className="col-md-2 col-form-label">Password</label>
+            <div className="col-md-8">
+              <input type="password" className="form-control login-input" id="inputPassword3" />
+            </div>
+          </div>
+          <div className="row button-login">
+            <button type="submit">Se connecter</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+}
+
+export default Login;
