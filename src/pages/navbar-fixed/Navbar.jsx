@@ -4,6 +4,7 @@ import Profile from '../body/profile/Profile'
 
 function Navbar() {
   return <>
+      <Profile />
       <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light ">
         <div class="container-fluid">
           <a class="navbar-brand text-success" href="#">VAIKA MILAY</a>
