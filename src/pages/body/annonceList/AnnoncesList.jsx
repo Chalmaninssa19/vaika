@@ -38,7 +38,7 @@ function AnnoncesList() {
 
     useEffect(() => {
         if (param && param.trim() !== '') {
-            axios.get(`voiture-production-524c.up.railway.app/api/voiture/annonces/filter?param=${param}&value=${value}`)
+            axios.get(`https://voiture-production-524c.up.railway.app/api/voiture/annonces/filter?param=${param}&value=${value}`)
                 .then(response => {
                     setData(response.data.data);
                 })
@@ -46,7 +46,7 @@ function AnnoncesList() {
                     console.error('Error fetching data: ', error);
                 });
         } else {
-            axios.get('voiture-production-524c.up.railway.app/api/voiture/annonces')
+            axios.get('https://voiture-production-524c.up.railway.app/api/voiture/annonces')
                 .then(response => {
                     setData(response.data.data);
                 })
@@ -65,7 +65,7 @@ function AnnoncesList() {
 
         try {
             setLoading(true);
-            const response = await axios.post('voiture-production-524c.up.railway.app/api/voiture/annonces/filter/multiCritere', formData);
+            const response = await axios.post('https://voiture-production-524c.up.railway.app/api/voiture/annonces/filter/multiCritere', formData);
             console.log(response.data);
             setData(response.data.data);
             setError(null);

@@ -11,7 +11,7 @@ function BodyAccueil() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-      axios.get('http://localhost:1970/api/voiture/accueil')
+      axios.get('https://voiture-production-524c.up.railway.app/api/voiture/accueil')
           .then(response => {
               setData(response.data.data);
               console.log(response.data.data);
