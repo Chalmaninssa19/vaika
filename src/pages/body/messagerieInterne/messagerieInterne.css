@@ -1,0 +1,126 @@
+
+.discussion-list {
+    padding-left: 2%;
+    max-height: 800px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    border: 1px solid #d3d4d6;;
+}
+
+.discussion {
+    max-height: 800px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    margin-left: 2%;
+    border: 1px solid #d3d4d6;;
+}
+
+.img-box img {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+.row-discussion {
+    margin-top: 5%;
+}
+
+.profile-bar {
+    border: 1px solid #d3d4d6;
+    box-shadow: 2px 2px 2px;
+}
+
+.bar-discussion-title {
+    padding-top: 1%;
+}
+
+.descri-bar-box {
+    font-weight: bolder;
+    padding-top: 1%;
+}
+
+.messages {
+    max-height: 480px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    padding-top: 1%;
+}
+
+.messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.messages::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 3px;
+}
+
+
+.img-bar-box img {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+.message-recu {
+    margin-left: 5%;
+}
+
+.message-send {
+    margin-left: 55%;
+}
+
+.sender-form {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin: auto;
+}
+
+.input-sender {
+    height: 50px;
+    width: 90%;
+}
+
+.btn-sender {
+    height: 50px;
+}
+
+h2 {
+    font-weight: bolder;
+}
+
+.descri-box {
+    font-weight: bolder;
+}
+
+.text-box-recu {
+    padding-left: 5%;
+    background-color: #d3d4d6;
+    border: 1px solid #d3d4d6;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.text-box-send {
+    padding-left: 5%;
+    background-color: #198754;
+    color: white;
+    border: 1px solid #198754;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.container-discussions {
+    padding-top: 1%;
+}
+
+.row-discussion:hover {
+    background-color: #f5f1f1;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}

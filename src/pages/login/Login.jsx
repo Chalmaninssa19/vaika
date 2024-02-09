@@ -15,7 +15,7 @@ function Login() {
             Veuillez vous connecter</h2>
           </div>
           <div class="champ-login">
-            <form>
+            <form action="/discussions" method="POST">
               <div class="row mb-3">
                 <label for="inputEmail3" class="col-sm-2 col-form-label">Email or username</label>
                 <div class="col-sm-10">

@@ -1,6 +1,7 @@
 import './bodyMarque.css'
+import { Link } from 'react-router-dom';
 
-function BodyMarque() {
+function BodyMarque({ data }) {
   return <>
         <section id="featured-cars" class="featured-cars">
 			<div class="container">
@@ -9,68 +10,31 @@ function BodyMarque() {
 				</div>
 				<div class="featured-cars-content">
 					<div class="row">
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="single-featured-cars">
-                                <a href="#">
-                                    <div class="featured-img-box">
-                                        <div class="featured-cars-img">
-                                            <img src="./images/brand/br1.png" alt="cars"/>
-                                        </div>
+
+                        {data && data.length > 0 ? (
+                            data.map(item => (
+                                <div key={item.idCategorie} className="col-lg-3 col-md-4 col-sm-6">
+                                    <div className="single-featured-cars">
+                                        <Link to={`/annonces/filter?param=marque&value=${item.idMarque}`}>
+                                            <div className="featured-img-box">
+                                                <div className="featured-cars-img">
+                                                <img src="./images/featured-cars/fc1.png" alt="cars"/>
+                                                </div>
+                                                <div className="featured-model-info">
+                                                <p>{item.intitule}</p>    
+                                                </div>
+                                            </div>
+                                        </Link>
                                     </div>
-                                </a>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="single-featured-cars">
-                                <a href="#">
-                                    <div class="featured-img-box">
-                                        <div class="featured-cars-img">
-                                            <img src="./images/brand/br2.png" alt="cars"/>
-                                        </div>
-                                    </div>
-                                </a>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="single-featured-cars">
-                                <a href="#">
-                                    <div class="featured-img-box">
-                                        <div class="featured-cars-img">
-                                            <img src="./images/brand/br3.png" alt="cars"/>
-                                        </div>
-                                    </div>
-                                </a>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="single-featured-cars">
-                                <a href="#">
-                                    <div class="featured-img-box">
-                                        <div class="featured-cars-img">
-                                            <img src="./images/brand/br4.png" alt="cars"/>
-                                        </div>
-                                    </div>
-                                </a>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="single-featured-cars">
-                                <a href="#">
-                                    <div class="featured-img-box">
-                                        <div class="featured-cars-img">
-                                            <img src="./images/brand/br4.png" alt="cars"/>
-                                        </div>
-                                    </div>
-                                </a>
-							</div>
-						</div>
-					</div>
+                                </div>
+                            ))
+                            ) : (
+                                <p>Chargement en cours...</p>
+                            )}
+                    </div>
 				</div>
 			</div>
 		</section>
-
   </>
 }
 

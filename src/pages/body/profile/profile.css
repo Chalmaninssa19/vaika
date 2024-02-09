@@ -1,0 +1,18 @@
+.modal-header img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.modal-header h5 {
+    margin-left: 5%;
+    font-weight: bolder;
+}
+
+.row-favoris {
+    padding-top: 5%;
+}
+
+.row-favoris:hover {
+    background-color: #d3d4d6;
+}

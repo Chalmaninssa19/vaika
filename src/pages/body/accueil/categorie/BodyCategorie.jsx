@@ -1,6 +1,9 @@
 import './bodyCategorie.css'
+import { Link } from 'react-router-dom';
 
-function BodyCategorie() {
+
+function BodyCategorie({ data }) {
+
   return <>
         <section id="featured-cars" class="featured-cars">
 			<div class="container">
@@ -8,90 +11,28 @@ function BodyCategorie() {
 					<h2 class="fw-bolder">Choisir votre categorie</h2>
 				</div>
 				<div class="featured-cars-content">
-					<div class="row">
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="single-featured-cars">
-                                <a href="#">
-                                    <div class="featured-img-box">
-                                        <div class="featured-cars-img">
+                    <div className="row">
+                        {data && data.length > 0 ? (
+                        data.map(item => (
+                            <div key={item.idCategorie} className="col-lg-3 col-md-4 col-sm-6">
+                                <div className="single-featured-cars">
+                                    <Link to={`/annonces/filter?param=categorie&value=${item.idCategorie}`}>
+                                        <div className="featured-img-box">
+                                            <div className="featured-cars-img">
                                             <img src="./images/featured-cars/fc1.png" alt="cars"/>
+                                            </div>
+                                            <div className="featured-model-info">
+                                            <p>{item.intitule}</p>    
+                                            </div>
                                         </div>
-                                        <div class="featured-model-info">
-                                            <p>
-                                                Cabriolet
-                                            </p>    
-                                        </div>
-                                    </div>
-                                </a>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="single-featured-cars">
-                                <a href="#">
-                                    <div class="featured-img-box">
-                                        <div class="featured-cars-img">
-                                            <img src="./images/featured-cars/fc2.png" alt="cars"/>
-                                        </div>
-                                        <div class="featured-model-info">
-                                            <p>
-                                                Citadine-Berline-Break
-                                            </p>
-                                        </div>
-                                    </div>
-                                </a>
+                                    </Link>
+                                </div>
                             </div>
-						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="single-featured-cars">
-                                <a href="#">
-                                    <div class="featured-img-box">
-                                        <div class="featured-cars-img">
-                                            <img src="./images/featured-cars/fc3.png" alt="cars"/>
-                                        </div>
-                                        <div class="featured-model-info">
-                                            <p>
-                                                Coupe-Sport
-                                            </p>
-                                        </div>
-                                    </div>
-                                </a>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="single-featured-cars">
-                                <a href="#">
-                                    <div class="featured-img-box">
-                                        <div class="featured-cars-img">
-                                            <img src="./images/featured-cars/fc4.png" alt="cars"/>
-                                        </div>
-                                        <div class="featured-model-info">
-                                            <p>
-                                                Monospace-Minibus   
-                                            </p>
-                                        </div>
-                                    </div>
-                                </a>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="single-featured-cars">
-                                <a href="#">
-                                    <div class="featured-img-box">
-                                        <div class="featured-cars-img">
-                                            <img src="./images/featured-cars/fc4.png" alt="cars"/>
-                                        </div>
-                                        <div class="featured-model-info">
-                                            <p>
-                                                Pickup-4x4  
-                                            </p>
-                                        </div>
-                                    </div>
-                                </a>
-							</div>
-						</div>
-					</div>
+                        ))
+                        ) : (
+                            <p>Chargement en cours...</p>
+                        )}
+                    </div>
 				</div>
 			</div>
 		</section>

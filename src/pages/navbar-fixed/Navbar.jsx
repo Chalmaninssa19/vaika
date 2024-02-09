@@ -2,9 +2,11 @@ import '../assets/dist/css/bootstrap.min.css'
 import '../assets/dist/css/style.css'
 import './navbar-top-fixed.css'
 import { FaUser } from 'react-icons/fa6'
+import Profile from '../body/profile/Profile'
 
 function Navbar() {
   return <>
+      <Profile />
       <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light ">
         <div class="container-fluid">
           <a class="navbar-brand text-success" href="#">VAIKA MILAY</a>
@@ -27,8 +29,8 @@ function Navbar() {
                 <a class="nav-link" href="/ficheAnnonce">A propos</a>
               </li>
               <li class="nav-item profile-item">
-                  <a href="/login">
-                    <button class="btn btn-success btn-lg" type="button"><FaUser /> Profile</button>
+                  <a>
+                    <button class="btn btn-success btn-lg" data-bs-toggle="modal" href="#exampleModalToggle"  type="button"><FaUser /> Profile</button>
                   </a>
               </li>
             </ul>
