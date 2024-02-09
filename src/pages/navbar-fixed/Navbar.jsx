@@ -1,3 +1,4 @@
+import './navbar-top-fixed.css'
 import { FaUser } from 'react-icons/fa6'
 import Profile from '../body/profile/Profile'
 
