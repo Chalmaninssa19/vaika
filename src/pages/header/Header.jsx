@@ -2,6 +2,9 @@ import './header.css'
 
 function Header() {
   return <>
+		<head>
+			
+		</head>
         <main class="container">
             <div class="row">
                 <div class="col-sm-4 col-md-6">

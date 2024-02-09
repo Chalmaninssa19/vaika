@@ -1,5 +1,3 @@
-import '../assets/dist/css/bootstrap.min.css'
-import '../assets/dist/css/style.css'
 import './navbar-top-fixed.css'
 import { FaUser } from 'react-icons/fa6'
 import Profile from '../body/profile/Profile'
