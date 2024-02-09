@@ -26,11 +26,7 @@ function Navbar() {
               <li class="nav-item">
                 <a class="nav-link" href="/ficheAnnonce">A propos</a>
               </li>
-              <li class="nav-item profile-item">
-                  <a>
-                    <button class="btn btn-success btn-lg" data-bs-toggle="modal" href="#exampleModalToggle"  type="button"><FaUser /> Profile</button>
-                  </a>
-              </li>
+             
             </ul>
           </div>
         </div>
