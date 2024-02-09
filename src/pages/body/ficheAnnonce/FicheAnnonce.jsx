@@ -10,6 +10,7 @@ import Footer from "../../footer/Footer"
 import { useParams } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { BiMessageSquare } from 'react-icons/bi';
 
 
 function FicheAnnonce() {
@@ -85,7 +86,7 @@ function FicheAnnonce() {
                     <div class="tab-prix">
                         <h1 class="fw-bold text-primary">{data.prix} Ar</h1>  
                             <a href="/login">
-                                <button class="btn btn-success btn-lg button-prix" type="submit">CONTACTER PROPRIETAIRE <FaPhone /></button>
+                                <button class="btn btn-success btn-lg button-prix" type="submit">CONTACTER PROPRIETAIRE <BiMessageSquare /></button>
                             </a>  
                             <a href="/discussions">
                                 <button class="btn btn-primary btn-lg button-prix" type="submit">AJOUTER FAVORIS <FaHeart /> </button>
