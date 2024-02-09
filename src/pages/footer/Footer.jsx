@@ -1,5 +1,4 @@
 import './footer.css'
-import '../assets/dist/js/bootstrap.bundle.min.js'
 
 function Footer() {
   return <>
