@@ -19,7 +19,7 @@ function Header() {
 						Chez VAIKA MILAY, nous nous engageons a offrir une experience d'achat transparente
 						et fiable.
 						</p>
-						<a class="btn btn-lg btn-success" href="../components/navbar/" role="button">Voir annonces</a>
+						<a class="btn btn-lg btn-success" href="/annonces" role="button">Voir annonces</a>
 					</div>
                 </div>
                 <div class="col-sm-4 col-md-6">

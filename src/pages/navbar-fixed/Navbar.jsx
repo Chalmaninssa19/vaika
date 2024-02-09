@@ -28,7 +28,7 @@ function Navbar() {
                 <a class="nav-link" href="/annonces">Annonces</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/ficheAnnonce">A propos</a>
+                <a class="nav-link" href="#">A propos</a>
               </li>
               <li class="nav-item profile-item">
                   <a>
